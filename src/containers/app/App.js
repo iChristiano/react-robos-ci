@@ -51,7 +51,7 @@ class App extends React.Component {
             returnElement = <h1 className='tc'>Loading...</h1>;
         } else {
             returnElement = <div className='tc'>
-                <h1 className='f1'>React Robos</h1>
+                <h1 className='f1'>React Robos C1</h1>
                 <SearchBox searchChange={onSearchChange} />
                 <Scroll>
                     <ErrorBoundary>
