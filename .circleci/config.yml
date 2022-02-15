@@ -20,5 +20,4 @@ workflows:
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: npm
       - node/install-packages:
-          cache-path: ~/react-robos-ci/node_modules
           override-ci-command: npm install --no-optional
