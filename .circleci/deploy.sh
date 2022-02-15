@@ -10,6 +10,6 @@ rm -R _site/
 
 git add -fA
 git commit --allow-empty -m "$(git log source -1 --pretty=%B)"
-git push -f origin gh-pages
+git push origin `git subtree split --prefix dist master`:gh-pages --force
 
 echo "deployed successfully"
