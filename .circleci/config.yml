@@ -30,8 +30,20 @@ jobs:
       - run:
           name: Run Tests
           command: npm run test
+  deploy:
+    docker:
+      - image: cimg/node:16.14.0
+    steps:
+      - checkout
+      - run:
+          name: install packages
+          command: npm ci --no-optional
+      - run:
+          name: Run Deploy
+          command: npm run deploy
 workflows:
-  test_my_app:
+  build_test_deploy:
     jobs:
       - build
       - test
+      - deploy
