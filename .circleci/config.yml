@@ -24,9 +24,9 @@ jobs:
       - image: cimg/node:16.14.0
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
+      - run:
+          name: install packages
+          command: npm ci --no-optional
       - run:
           name: Run Tests
           command: npm run test
