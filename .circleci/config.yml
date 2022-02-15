@@ -49,8 +49,14 @@ jobs:
 workflows:
   build_test_deploy:
     jobs:
-      - build
-      - test
+      - build:
+        filters:
+          branches:
+            ignore: /gh-pages\/.*/
+      - test:
+        filters:
+          branches:
+            ignore: /gh-pages\/.*/
       - deploy:
           requires:
             - test
