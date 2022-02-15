@@ -23,9 +23,10 @@ jobs:
     docker:
       - image: cimg/node:16.14.0
     steps:
-      - restore_cache:
-          keys:
-            - node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
+      - checkout
+      - run:
+          name: install packages
+          command: npm ci --no-optional
       - run:
           name: Run Tests
           command: CI=true npm run test
@@ -53,8 +54,6 @@ workflows:
             branches:
               ignore: /gh-pages\/.*/
       - test:
-          requires:
-            - build
           filters:
             branches:
               ignore: /gh-pages\/.*/
