@@ -40,7 +40,11 @@ jobs:
           command: npm ci --no-optional
       - run:
           name: Run Deploy
-          command: CI=true npm run deploy
+          commands:
+            - git config --global -l
+            - git config --global user.email circleci@circleci
+            - git config --global user.name CircleCI
+            - CI=true npm run deploy
 workflows:
   build_test_deploy:
     jobs:
