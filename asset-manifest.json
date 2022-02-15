@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-robos-redux/static/css/main.20bc310d.css",
-    "main.js": "/react-robos-redux/static/js/main.d816cee9.js",
-    "static/media/SEGA.woff": "/react-robos-redux/static/media/SEGA.47b4bfa94ef243af4a5b.woff",
-    "index.html": "/react-robos-redux/index.html",
-    "main.20bc310d.css.map": "/react-robos-redux/static/css/main.20bc310d.css.map",
-    "main.d816cee9.js.map": "/react-robos-redux/static/js/main.d816cee9.js.map"
+    "main.css": "/react-robos-ci/static/css/main.babd2407.css",
+    "main.js": "/react-robos-ci/static/js/main.2edc9a22.js",
+    "static/media/SEGA.woff": "/react-robos-ci/static/media/SEGA.47b4bfa94ef243af4a5b.woff",
+    "index.html": "/react-robos-ci/index.html",
+    "main.babd2407.css.map": "/react-robos-ci/static/css/main.babd2407.css.map",
+    "main.2edc9a22.js.map": "/react-robos-ci/static/js/main.2edc9a22.js.map"
   },
   "entrypoints": [
-    "static/css/main.20bc310d.css",
-    "static/js/main.d816cee9.js"
+    "static/css/main.babd2407.css",
+    "static/js/main.2edc9a22.js"
   ]
 }
