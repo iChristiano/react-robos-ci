@@ -41,6 +41,8 @@ jobs:
       - run:
           name: install packages
           command: npm ci --no-optional
+      - run: git config --global user.email iChristiano.mail@gmail.com
+      - run: git config --global user.name iChristiano
       - run:
           name: Run Deploy
           command: CI=true npm run deploy
