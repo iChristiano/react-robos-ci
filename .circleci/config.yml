@@ -43,10 +43,7 @@ jobs:
           command: npm ci --no-optional
       - deploy:
         name: Deploy Release to GitHub
-        command: |
-          if [ $CIRCLE_BRANCH == 'source' ]; then
-            bash .circleci/deploy.sh
-          fi
+        command: CI=true bash .circleci/deploy.sh
 workflows:
   build_test_deploy:
     jobs:
