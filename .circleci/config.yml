@@ -18,7 +18,7 @@ jobs:
             - ~/.npm
       - run:
           name: Run Build
-          command: npm run build
+          command: CI=true npm run build
   test:
     docker:
       - image: cimg/node:16.14.0
@@ -29,7 +29,7 @@ jobs:
           command: npm ci --no-optional
       - run:
           name: Run Tests
-          command: npm run test
+          command: CI=true npm run test
   deploy:
     docker:
       - image: cimg/node:16.14.0
@@ -40,10 +40,13 @@ jobs:
           command: npm ci --no-optional
       - run:
           name: Run Deploy
-          command: npm run deploy
+          command: CI=true npm run deploy
 workflows:
   build_test_deploy:
     jobs:
       - build
       - test
-      - deploy
+      - deploy:
+          requires:
+            - test
+            - build
