@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Card = ({id, name, email, onSelectedRobotChange}) => {
-        const selectedRobot = {
+    const selectedRobot = {
         id: id,
         name: name,
         email: email
