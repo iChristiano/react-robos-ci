@@ -3,7 +3,7 @@ import React from 'react';
 const Card = ({id, name, email, onSelectedRobotChange}) => {
     const selectedRobot = {
         id: id,
-                name: name,
+name: name,
         email: email
     }
     return(
