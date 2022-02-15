@@ -17,12 +17,16 @@ jobs:
           paths:
             - ~/.npm
       - run:
-          name: Run Tests
+          name: Run Build
           command: npm run build
   test:
     docker:
       - image: cimg/node:16.14.0
     steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
       - run:
           name: Run Tests
           command: npm run test
