@@ -23,7 +23,7 @@ jobs:
     docker:
       - image: cimg/node:16.14.0
     steps:
-       - restore_cache:
+      - restore_cache:
           keys:
             - node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
       - run:
