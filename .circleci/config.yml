@@ -37,12 +37,10 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be"
+            - "e0:d5:d9:a6:5d:8e:ff:a2:d7:7d:1c:56:6c:82:c7:fa"
       - run:
           name: install packages
           command: npm ci --no-optional
-      - run: git config --global user.email iChristiano.mail@gmail.com
-      - run: git config --global user.name iChristiano
       - run:
           name: Run Deploy
           command: CI=true npm run deploy
