@@ -57,4 +57,4 @@ workflows:
             - build
           filters:
             ignore:
-              only: gh-pages
+              only: "gh-pages"
